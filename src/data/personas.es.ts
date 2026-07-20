@@ -21,6 +21,7 @@ const personas: Coverage[] = [
       'Coberturas adaptadas a tu etapa de vida',
     ],
     hideAdviceCta: true,
+    floatingCta: true,
     about: {
       title: '¿En qué consiste un seguro de vida?',
       paragraphs: [
@@ -168,6 +169,7 @@ const personas: Coverage[] = [
     heroCtas: [{ label: 'Cotizá tu seguro', href: 'contact', variant: 'primary' }],
     heroChecklist: ['Protección inmediata', 'Asesoramiento personalizado', 'Coberturas adaptadas a tu vida'],
     hideAdviceCta: true,
+    floatingCta: true,
     about: {
       title: '¿Qué es un seguro contra accidentes personales?',
       paragraphs: [
@@ -296,6 +298,7 @@ const personas: Coverage[] = [
     heroCtas: [{ label: 'Cotizá tu seguro', href: 'contact', variant: 'primary' }],
     heroChecklist: ['Cobertura en Paraguay y el exterior', 'Asesoramiento personalizado', 'Planes a tu medida'],
     hideAdviceCta: true,
+    floatingCta: true,
     about: {
       title: '¿Por qué un seguro de salud internacional?',
       paragraphs: [
@@ -435,6 +438,7 @@ const personas: Coverage[] = [
     heroCtas: [{ label: 'Cotizar ahora', href: 'contact', variant: 'primary' }],
     heroChecklist: ['Protección para tu hogar', 'Asesoramiento profesional', 'Cobertura personalizada'],
     hideAdviceCta: true,
+    floatingCta: true,
     about: {
       title: '¿Qué es un seguro para el hogar?',
       paragraphs: [

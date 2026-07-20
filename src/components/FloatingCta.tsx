@@ -28,23 +28,22 @@ export default function FloatingCta({
     <AnimatePresence>
       {visible && (
         <motion.div
-          className="fixed right-4 top-1/2 z-40 flex -translate-y-1/2 flex-col gap-3"
-          initial={{ opacity: 0, x: 24 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 24 }}
-          transition={{ duration: 0.25 }}
+          className="fixed bottom-5 right-5 z-40"
+          initial={{ opacity: 0, y: 12, scale: 0.9 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 12, scale: 0.9 }}
+          transition={{ duration: 0.25, ease: 'easeOut' }}
         >
-          <motion.div whileHover={{ scale: 1.05 }}>
+          <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
             <Link
               to={path('contact')}
               state={contactState}
-              className="flex items-center gap-2 rounded-full bg-brandred px-4 py-3 text-xs font-semibold uppercase text-white shadow-lg hover:bg-brandred-dark"
+              className="flex items-center gap-1.5 rounded-full bg-brandred py-2 pl-3 pr-3.5 text-xs font-semibold uppercase text-white shadow-lg hover:bg-brandred-dark"
             >
-              <Car className="h-4 w-4 shrink-0" />
+              <Car className="h-3.5 w-3.5 shrink-0" />
               Cotizar
             </Link>
           </motion.div>
-
         </motion.div>
       )}
     </AnimatePresence>
