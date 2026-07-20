@@ -60,6 +60,7 @@ import Icon from '../components/Icon'
 import Faq from '../components/Faq'
 import FloatingCta from '../components/FloatingCta'
 import { useLocale } from '../i18n/LocaleContext'
+import { assetUrl } from '../lib/assetUrl'
 
 const benefitIcons: Record<string, LucideIcon> = {
   Handshake,
@@ -154,7 +155,7 @@ export default function CoverageDetalle({ group }: { group: Group }) {
           <>
             {coverage.heroEnhanced ? (
               <motion.img
-                src={coverage.image}
+                src={assetUrl(coverage.image)}
                 alt={coverage.title}
                 className="absolute inset-0 h-full w-full object-cover brightness-110 contrast-105"
                 style={{ objectPosition: coverage.heroImagePosition ?? '78% 22%' }}
@@ -163,7 +164,7 @@ export default function CoverageDetalle({ group }: { group: Group }) {
               />
             ) : (
               <img
-                src={coverage.image}
+                src={assetUrl(coverage.image)}
                 alt={coverage.title}
                 className="absolute inset-0 h-full w-full object-cover object-[65%_20%]"
               />
@@ -339,7 +340,7 @@ export default function CoverageDetalle({ group }: { group: Group }) {
                 transition={{ duration: 0.6, ease: 'easeOut' }}
               >
                 <img
-                  src={coverage.secondaryImage}
+                  src={assetUrl(coverage.secondaryImage)}
                   alt={coverage.title}
                   className="h-full w-full object-cover object-[80%_50%] transition-transform duration-500 ease-out group-hover:scale-105"
                 />
@@ -380,7 +381,7 @@ export default function CoverageDetalle({ group }: { group: Group }) {
       {coverage.promoBanner && (
         <section className="relative py-14">
           <Link to={path('contact')} className="relative block">
-            <img src={coverage.promoBanner} alt={coverage.title} className="w-full" />
+            <img src={assetUrl(coverage.promoBanner)} alt={coverage.title} className="w-full" />
             <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white to-transparent" />
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent" />
           </Link>
@@ -452,7 +453,7 @@ export default function CoverageDetalle({ group }: { group: Group }) {
               transition={{ duration: 0.6, ease: 'easeOut' }}
             >
               <img
-                src={coverage.feature.image}
+                src={assetUrl(coverage.feature.image)}
                 alt={coverage.title}
                 className="absolute inset-0 h-full w-full object-cover"
                 style={{ objectPosition: coverage.feature.imagePosition ?? 'center' }}
@@ -485,7 +486,7 @@ export default function CoverageDetalle({ group }: { group: Group }) {
               </Link>
             </div>
             <img
-              src={coverage.ctaBanner.image}
+              src={assetUrl(coverage.ctaBanner.image)}
               alt=""
               className="absolute inset-y-0 right-0 hidden w-1/3 object-cover opacity-90 [mask-image:linear-gradient(to_right,transparent,black_25%)] sm:block"
               style={{ objectPosition: coverage.ctaBanner.imagePosition ?? 'center' }}
@@ -497,7 +498,7 @@ export default function CoverageDetalle({ group }: { group: Group }) {
       {coverage.promoBanner2 && (
         <section className="relative py-14">
           <Link to={path('contact')} className="relative block">
-            <img src={coverage.promoBanner2} alt={coverage.title} className="w-full" />
+            <img src={assetUrl(coverage.promoBanner2)} alt={coverage.title} className="w-full" />
             <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white to-transparent" />
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent" />
           </Link>
