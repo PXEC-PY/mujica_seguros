@@ -149,7 +149,7 @@ export default function CoverageDetalle({ group }: { group: Group }) {
   if (!coverage) return <Navigate to={path(section)} replace />
 
   return (
-    <div>
+    <div key={coverage.slug}>
       <section className="relative min-h-[420px] overflow-hidden bg-navy py-16 text-white">
         {coverage.image && (
           <>
