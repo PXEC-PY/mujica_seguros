@@ -1,0 +1,20 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+.env.local
+
+# Datos de contacto en runtime (pueden contener datos personales)
+server/data/*.json
+
+# Imágenes de referencia sueltas (ya copiadas a public/images con nombres definitivos)
+/bannerhogar.png
+/hogar.png
+/bannervida.png
+/manovida.png
+/ultimovida.png
+/banneraccidente.png
+/segundoaccidente.png
+/terceroaccidente.png
+/bannersalud.png
+/salud2.png
